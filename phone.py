@@ -1,6 +1,14 @@
-import phonenumbers
-from phonenumbers import carrier,geocoder,timezone
-from pystyle import *
+import subprocess
+try:
+    import phonenumbers
+    from phonenumbers import carrier,geocoder,timezone
+    from pystyle import *
+except:
+    subprocess.run('pip3 install phonenumbers')
+    subprocess.run('pip3 install pystyle')
+    import phonenumbers
+    from phonenumbers import carrier,geocoder,timezone
+    from pystyle import *
 print("Alert : ")
 Write.Print("\n\tWrite exit For Exit",Colors.orange)
 Write.Print("\n\tPlease Write Your Country International Calling Code Before The Number",Colors.red)
